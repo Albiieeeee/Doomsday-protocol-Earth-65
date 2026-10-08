@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Customized Name | Starbuck</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="nav">
+    <a class="brand" href="index.html"><svg viewBox="0 0 24 24"><path d="M4 8h13v5a6 6 0 0 1-6 6H10a6 6 0 0 1-6-6V8zm13 1h2a2 2 0 0 1 0 5h-2V9zm0 1.5v2h2a1 1 0 0 0 0-2h-2zM8 2c.8 1 .8 2 0 3m4-3c.8 1 .8 2 0 3M3 21h16v1.5H3z"/></svg> STARBUCK</a>
+    <nav><ul><li><a href="index.html" class="">Home</a></li><li><a href="premium.html" class="">Premium Experience</a></li><li><a href="birthday.html" class="">Birthday Offer</a></li><li><a href="custom-name.html" class="active">Customized Name</a></li><li><a href="beverages.html" class="">Beverages</a></li><li><a href="ambiance.html" class="">Luxury Ambiance</a></li><li><a href="study-work.html" class="">Study & Work</a></li></ul></nav>
+  </div>
+</header>
+<div class="hero small">
+  <span class="eyebrow">Make it yours</span>
+  <h1>Customized Name</h1>
+  <p>Put your own name on your cup.</p>
+</div>
+
+<section>
+  <div class="wrap split">
+    <div>
+      <h2>Your name, on your cup</h2>
+      <p class="lead">Type a name and see it on a cup before you order. Perfect for gifts, meetups and making mornings personal.</p>
+      <input type="text" id="cn" maxlength="14" placeholder="Type a name" oninput="upd()"><br><br>
+      <div class="tabs">
+        <button class="tab on" onclick="size(this,'Tall')">Tall</button>
+        <button class="tab" onclick="size(this,'Grande')">Grande</button>
+        <button class="tab" onclick="size(this,'Venti')">Venti</button>
+      </div>
+      <p>Cup size: <b id="sz">Tall</b></p>
+      <ul class="check" style="margin-top:14px">
+        <li>Free name printing on every order</li>
+        <li>Hand-lettered by our baristas for gifts</li>
+        <li>Up to 14 characters</li>
+      </ul>
+    </div>
+    <div class="cup">
+      <div class="lid"></div>
+      <div class="body"><span class="name" id="cup">Your Name</span></div>
+    </div>
+  </div>
+</section>
+<script>
+function upd(){var v=document.getElementById('cn').value.trim();document.getElementById('cup').textContent=v||'Your Name';}
+function size(b,s){document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('on')});b.classList.add('on');document.getElementById('sz').textContent=s;}
+</script>
+
+<footer>
+  <p>&copy; 2026 Starbuck &middot; Crafted with care, one cup at a time.</p>
+  <p style="margin-top:6px;opacity:.7">An original concept website inspired by café culture.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Study & Work | Starbuck</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="nav">
+    <a class="brand" href="index.html"><svg viewBox="0 0 24 24"><path d="M4 8h13v5a6 6 0 0 1-6 6H10a6 6 0 0 1-6-6V8zm13 1h2a2 2 0 0 1 0 5h-2V9zm0 1.5v2h2a1 1 0 0 0 0-2h-2zM8 2c.8 1 .8 2 0 3m4-3c.8 1 .8 2 0 3M3 21h16v1.5H3z"/></svg> STARBUCK</a>
+    <nav><ul><li><a href="index.html" class="">Home</a></li><li><a href="premium.html" class="">Premium Experience</a></li><li><a href="birthday.html" class="">Birthday Offer</a></li><li><a href="custom-name.html" class="">Customized Name</a></li><li><a href="beverages.html" class="">Beverages</a></li><li><a href="ambiance.html" class="">Luxury Ambiance</a></li><li><a href="study-work.html" class="active">Study & Work</a></li></ul></nav>
+  </div>
+</header>
+<div class="hero small">
+  <span class="eyebrow">Productivity</span>
+  <h1>Perfect for Study &amp; Work</h1>
+  <p>Quiet, comfortable and connected for students and professionals.</p>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>Your space to focus</h2>
+    <p class="lead">Built for students, freelancers and working professionals.</p>
+    <div class="grid"><div class="card"><div class="icon">📶</div><h3>Fast Wi-Fi</h3><p>Reliable high-speed internet for calls, uploads and research.</p></div><div class="card"><div class="icon">🔌</div><h3>Power at Every Seat</h3><p>Plug points and USB-C ports at nearly every table.</p></div><div class="card"><div class="icon">🤫</div><h3>Quiet Zones</h3><p>Designated silent areas for deep work and exam prep.</p></div><div class="card"><div class="icon">👥</div><h3>Meeting Tables</h3><p>Larger tables for team discussions and client chats.</p></div><div class="card"><div class="icon">☕</div><h3>Refill Deals</h3><p>Discounted refills so you can stay as long as you need.</p></div><div class="card"><div class="icon">🕗</div><h3>Long Hours</h3><p>Open early and late, so your schedule is never a problem.</p></div></div>
+  </div>
+</section>
+<section class="dark">
+  <div class="wrap" style="text-align:center">
+    <h2>Focus timer</h2>
+    <p class="lead" style="margin-left:auto;margin-right:auto">Try a 25-minute focus session with a short break, right from your table.</p>
+    <div class="timer" id="tm">25:00</div>
+    <button class="btn" onclick="start()">Start</button>
+    <button class="btn ghost" onclick="reset()">Reset</button>
+    <p id="ts" style="margin-top:12px;color:var(--latte)"></p>
+  </div>
+</section>
+<script>
+var left=1500,iv=null;
+function fmt(){var m=Math.floor(left/60),s=left%60;document.getElementById('tm').textContent=(m<10?'0':'')+m+':'+(s<10?'0':'')+s;}
+function start(){
+  if(iv)return;
+  document.getElementById('ts').textContent='Stay focused. You have got this.';
+  iv=setInterval(function(){
+    left--;fmt();
+    if(left<=0){clearInterval(iv);iv=null;document.getElementById('ts').textContent='Session complete. Take a 5-minute break and sip your coffee.';}
+  },1000);
+}
+function reset(){clearInterval(iv);iv=null;left=1500;fmt();document.getElementById('ts').textContent='';}
+</script>
+
+<footer>
+  <p>&copy; 2026 Starbuck &middot; Crafted with care, one cup at a time.</p>
+  <p style="margin-top:6px;opacity:.7">An original concept website inspired by café culture.</p>
+</footer>
+</body>
+</html>

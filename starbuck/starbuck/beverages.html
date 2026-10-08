@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beverages | Starbuck</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="nav">
+    <a class="brand" href="index.html"><svg viewBox="0 0 24 24"><path d="M4 8h13v5a6 6 0 0 1-6 6H10a6 6 0 0 1-6-6V8zm13 1h2a2 2 0 0 1 0 5h-2V9zm0 1.5v2h2a1 1 0 0 0 0-2h-2zM8 2c.8 1 .8 2 0 3m4-3c.8 1 .8 2 0 3M3 21h16v1.5H3z"/></svg> STARBUCK</a>
+    <nav><ul><li><a href="index.html" class="">Home</a></li><li><a href="premium.html" class="">Premium Experience</a></li><li><a href="birthday.html" class="">Birthday Offer</a></li><li><a href="custom-name.html" class="">Customized Name</a></li><li><a href="beverages.html" class="active">Beverages</a></li><li><a href="ambiance.html" class="">Luxury Ambiance</a></li><li><a href="study-work.html" class="">Study & Work</a></li></ul></nav>
+  </div>
+</header>
+<div class="hero small">
+  <span class="eyebrow">Our menu</span>
+  <h1>Hot &amp; Cold Beverages</h1>
+  <p>Handcrafted drinks for every mood and every season.</p>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="tabs">
+      <button class="tab on" id="t-hot" onclick="show('hot')">🔥 Hot</button>
+      <button class="tab" id="t-cold" onclick="show('cold')">❄️ Cold</button>
+    </div>
+    <div id="hot"><div class="grid"><div class="card"><div class="icon">☕</div><h3>Signature Espresso</h3><p>Rich, bold and velvety with a caramel finish.</p><div class="price">₹180</div></div><div class="card"><div class="icon">🥛</div><h3>Caffè Latte</h3><p>Steamed milk over a smooth espresso shot.</p><div class="price">₹240</div></div><div class="card"><div class="icon">🍫</div><h3>Mocha</h3><p>Espresso, dark chocolate and silky milk.</p><div class="price">₹270</div></div><div class="card"><div class="icon">🍵</div><h3>Masala Chai Latte</h3><p>Spiced tea simmered with warm milk.</p><div class="price">₹220</div></div><div class="card"><div class="icon">🍯</div><h3>Honey Cinnamon Flat White</h3><p>Smooth, sweet and gently spiced.</p><div class="price">₹280</div></div><div class="card"><div class="icon">🫖</div><h3>Hot Chocolate</h3><p>Thick, creamy and topped with cocoa.</p><div class="price">₹230</div></div></div></div>
+    <div id="cold" class="hidden"><div class="grid"><div class="card"><div class="icon">🧊</div><h3>Cold Brew</h3><p>Steeped 18 hours for a smooth, low-acid cup.</p><div class="price">₹260</div></div><div class="card"><div class="icon">🥤</div><h3>Iced Latte</h3><p>Chilled espresso over milk and ice.</p><div class="price">₹250</div></div><div class="card"><div class="icon">🍨</div><h3>Caramel Frappe</h3><p>Blended, creamy and drizzled with caramel.</p><div class="price">₹320</div></div><div class="card"><div class="icon">🍋</div><h3>Iced Lemon Tea</h3><p>Refreshing black tea with fresh lemon.</p><div class="price">₹190</div></div><div class="card"><div class="icon">🥭</div><h3>Mango Cooler</h3><p>Fresh mango blended with cold milk.</p><div class="price">₹290</div></div><div class="card"><div class="icon">🍓</div><h3>Berry Refresher</h3><p>Mixed berries, mint and sparkling water.</p><div class="price">₹270</div></div></div></div>
+  </div>
+</section>
+<script>
+function show(w){
+  ['hot','cold'].forEach(function(x){
+    document.getElementById(x).classList.toggle('hidden',x!==w);
+    document.getElementById('t-'+x).classList.toggle('on',x===w);
+  });
+}
+</script>
+
+<footer>
+  <p>&copy; 2026 Starbuck &middot; Crafted with care, one cup at a time.</p>
+  <p style="margin-top:6px;opacity:.7">An original concept website inspired by café culture.</p>
+</footer>
+</body>
+</html>

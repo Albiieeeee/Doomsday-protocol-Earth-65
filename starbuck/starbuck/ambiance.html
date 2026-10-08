@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Luxury Ambiance | Starbuck</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="nav">
+    <a class="brand" href="index.html"><svg viewBox="0 0 24 24"><path d="M4 8h13v5a6 6 0 0 1-6 6H10a6 6 0 0 1-6-6V8zm13 1h2a2 2 0 0 1 0 5h-2V9zm0 1.5v2h2a1 1 0 0 0 0-2h-2zM8 2c.8 1 .8 2 0 3m4-3c.8 1 .8 2 0 3M3 21h16v1.5H3z"/></svg> STARBUCK</a>
+    <nav><ul><li><a href="index.html" class="">Home</a></li><li><a href="premium.html" class="">Premium Experience</a></li><li><a href="birthday.html" class="">Birthday Offer</a></li><li><a href="custom-name.html" class="">Customized Name</a></li><li><a href="beverages.html" class="">Beverages</a></li><li><a href="ambiance.html" class="active">Luxury Ambiance</a></li><li><a href="study-work.html" class="">Study & Work</a></li></ul></nav>
+  </div>
+</header>
+<div class="hero small">
+  <span class="eyebrow">The setting</span>
+  <h1>Luxury Ambiance</h1>
+  <p>A calm, elegant space to relax, meet and unwind.</p>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>Designed to help you unwind</h2>
+    <p class="lead">Every detail is chosen to create a calm, luxurious setting.</p>
+    <div class="grid"><div class="card"><div class="icon">💡</div><h3>Warm Lighting</h3><p>Soft, golden light that is easy on the eyes any time of day.</p></div><div class="card"><div class="icon">🛋️</div><h3>Plush Seating</h3><p>Leather armchairs, velvet sofas and quiet window nooks.</p></div><div class="card"><div class="icon">🎷</div><h3>Curated Music</h3><p>Low-volume jazz and acoustic playlists that never intrude.</p></div><div class="card"><div class="icon">🪴</div><h3>Greenery</h3><p>Living plants and natural wood for a fresh, grounded feel.</p></div><div class="card"><div class="icon">🌡️</div><h3>Perfect Climate</h3><p>Comfortable temperature and clean air all year round.</p></div><div class="card"><div class="icon">🌅</div><h3>Golden Hour Terrace</h3><p>An open-air terrace made for sunsets and slow conversation.</p></div></div>
+  </div>
+</section>
+<section class="dark">
+  <div class="wrap">
+    <h2>Pick your mood</h2>
+    <p class="lead">Choose a vibe to see how we set the room.</p>
+    <div class="tabs">
+      <button class="tab on" onclick="mood(this,'Morning','Bright light, fresh pastries and an energising playlist.')">Morning</button>
+      <button class="tab" onclick="mood(this,'Afternoon','Soft sunlight, relaxed acoustic music and quiet corners.')">Afternoon</button>
+      <button class="tab" onclick="mood(this,'Evening','Dimmed lamps, smooth jazz and a candle on every table.')">Evening</button>
+    </div>
+    <div class="card"><h3 id="mt">Morning</h3><p id="md">Bright light, fresh pastries and an energising playlist.</p></div>
+  </div>
+</section>
+<script>
+function mood(b,t,d){
+  document.querySelectorAll('.tab').forEach(function(x){x.classList.remove('on')});
+  b.classList.add('on');
+  document.getElementById('mt').textContent=t;
+  document.getElementById('md').textContent=d;
+}
+</script>
+
+<footer>
+  <p>&copy; 2026 Starbuck &middot; Crafted with care, one cup at a time.</p>
+  <p style="margin-top:6px;opacity:.7">An original concept website inspired by café culture.</p>
+</footer>
+</body>
+</html>
